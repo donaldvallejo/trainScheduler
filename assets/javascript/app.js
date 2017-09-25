@@ -9,13 +9,13 @@ $(document).ready(function () {
 		var snap = snapshot.val();
 
 		var tr = $("<tr>");
-		var employeeName = $("<td></td>").text(snap.name).addClass("employee");
+		var trainName = $("<td></td>").text(snap.name).addClass("employee");
 		var trainDestination = $("<td></td>").text(snap.destination).addClass("employee");
 		var firstTrainTime = $("<td></td>").text(snap.firstTrainTime).addClass("employee");
 		var nextArrival = $("<td></td>").text("test").addClass("employee");
 		var frequency = $("<td></td>").text(snap.frequency).addClass("employee");
 
-		tr.append(employeeName);
+		tr.append(trainName);
 		tr.append(trainDestination);
 		tr.append(firstTrainTime);
 		tr.append(nextArrival);
