@@ -2,60 +2,52 @@
 <html>
   <head>
     <link rel="stylesheet" href="assets/style/style.css">
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
     <meta charset="utf-8">
-
-
-	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
-	<script>
-  // Initialize Firebase
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script>
   var config = {
-    apiKey: "AIzaSyAGLO--3PIpVBYVDQXF-QLg1_NqLrrqJcE",
-    authDomain: "trainscheduler-53cff.firebaseapp.com",
-    databaseURL: "https://trainscheduler-53cff.firebaseio.com",
-    projectId: "trainscheduler-53cff",
-    storageBucket: "",
-    messagingSenderId: "1095397771866"
-  };
-  firebase.initializeApp(config);
+  apiKey: "AIzaSyCVH3xxzmbkHdlAw1k1B6Gtg39iBQyABFw",
+  authDomain: "trainscheduler-91334.firebaseapp.com",
+  databaseURL: "https://trainscheduler-91334.firebaseio.com",
+  projectId: "trainscheduler-91334",
+  storageBucket: "trainscheduler-91334.appspot.com",
+  messagingSenderId: "644784210794"
+};
+firebase.initializeApp(config);
 	</script>
 
-    <title>trainScheduler</title>
+    <title>RestartTrainScheduler</title>
   </head>
   <body>
-    <div class="jumbotron">
-      <h1 class="text-center"><strong>Train Scheduler</strong></h1>
+    <div class="jumbotron" style="background-color: #337ab7; color: white;">
+      <h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i>Train Scheduler</strong></h1>
     </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="panel panel-default">
-            <!-- Default panel contents -->
-            <div class="panel-heading">Current Employees</div>
-              <!-- Table -->
-              <table class="table">
-                <tr>
-                    <th class="title">Train Name</th>
-                    <th class="title">Destination</th>
-                    <th class="title">Frequency (min)</th>
-                    <th class="title">Next Arrival</th>
-                    <th class="title">Minutes Away</th>
-                </tr>
-                <tr>
-                    <td class="employee">...</td>
-                    <td class="employee">...</td>
-                    <td class="employee">...</td>
-                    <td class="employee">...</td>
-                    <td class="employee">...</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel panel-primary" style="border-color: #337ab7">
+                        <div class="panel-heading">Current Train Schedule</div>
+                        <table class="table">
+                            <tr>
+                                <th class="title">Train Name</th>
+                                <th class="title">Destination</th>
+                                <th class="title">Frequency (min)</th>
+                                <th class="title">Next Arrival</th>
+                                <th class="title">Minutes Away</th>
+                            </tr>
+                            <tr>
+                                <td class="employee">...</td>
+                                <td class="employee">...</td>
+                                <td class="employee">...</td>
+                                <td class="employee">...</td>
+                                <td class="employee">...</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                </div>
 
     <div class="panel panel-primary">
       <div class="panel-heading">
@@ -63,37 +55,32 @@
       </div>
       <div class="panel-body">
 
-        <!-- Here we create an HTML Form for handling the inputs-->
         <form role="form">
 
-            <!-- Here we create the text box for capturing the search term-->
           <div class="form-group">
             <label for="search">Train Name</label>
             <input type="text" class="form-control" id="name">
           </div>
 
-          <!-- Here we capture the number of records that the user wants to retrieve  -->
           <div class="form-group">
             <label for="role">Destination</label>
             <input type="text" class="form-control" id="role">
 
           </div>
 
-            <!-- Here we capture the Start Year Parameter-->
           <div class="form-group">
             <label for="startYear">First Train Time (HH:mm - military time)</label>
             <input type="text" class="form-control" id="startDate">
           </div>
 
-            <!-- Here we capture the End Year Parameter -->
           <div class="form-group">
             <label for="endYear">Frequency (min)</label>
             <input type="text" class="form-control" id="monthlyRate">
           </div>
 
-          <!-- Here we have our final submit button -->
           <button type="submit" class="btn btn-default" id="add"><i class="fa fa-search"></i> add</button>
-            <!-- <button type="button" class="btn btn-default" id="clearAll"><i class="fa fa-trash"></i> Clear Results</button> -->
+          <button type="submit" class="btn btn-default" id="remove"><i class="fa fa-search"></i> remove</button>
+
 
         </form>
       </div>
@@ -124,6 +111,15 @@
       </div>
     </div>
   </div> -->
+    </div>
+    </div>
+  </div>
 
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <!-- <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
   </body>
 </html>
