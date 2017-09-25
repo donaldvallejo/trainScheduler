@@ -14,12 +14,14 @@ $(document).ready(function () {
 		var startDate = $("<td></td>").text(snap.startDate).addClass("employee");
 		var monthsWorked = $("<td></td>").text("10").addClass("employee");
 		var monthlyRate = $("<td></td>").text(snap.monthlyRate).addClass("employee");
+		// var totalBilled = $("<td></td>").text("billed").addClass("employee");
 
 		tr.append(employeeName);
 		tr.append(employeeRole);
 		tr.append(startDate);
 		tr.append(monthsWorked);
 		tr.append(monthlyRate);
+		// tr.append(totalBilled);
 
 		table.append(tr);
 
