@@ -10,37 +10,32 @@ $(document).ready(function () {
 
 		var tr = $("<tr>");
 		var employeeName = $("<td></td>").text(snap.name).addClass("employee");
-		var employeeRole = $("<td></td>").text(snap.role).addClass("employee");
-		var startDate = $("<td></td>").text(snap.startDate).addClass("employee");
-		var monthsWorked = $("<td></td>").text("10").addClass("employee");
-		var monthlyRate = $("<td></td>").text(snap.monthlyRate).addClass("employee");
-		// var totalBilled = $("<td></td>").text("billed").addClass("employee");
+		var trainDestination = $("<td></td>").text(snap.destination).addClass("employee");
+		var firstTrainTime = $("<td></td>").text(snap.firstTrainTime).addClass("employee");
+		var nextArrival = $("<td></td>").text("test").addClass("employee");
+		var frequency = $("<td></td>").text(snap.frequency).addClass("employee");
 
 		tr.append(employeeName);
-		tr.append(employeeRole);
-		tr.append(startDate);
-		tr.append(monthsWorked);
-		tr.append(monthlyRate);
-		// tr.append(totalBilled);
-
+		tr.append(trainDestination);
+		tr.append(firstTrainTime);
+		tr.append(nextArrival);
+		tr.append(frequency);
 		table.append(tr);
 
 	});
 
 	$("#add").on("click", function (event) {
-
-		// Capture User Inputs and store into variables
 		var name = $("#name").val();
-		var role = $("#role").val();
-		var startDate = $("#startDate").val();
-		var monthlyRate = $("#monthlyRate").val();
+		var destination = $("#destination").val();
+		var firstTrainTime = $("#firstTrainTime").val();
+		var frequency = $("#frequency").val();
 
 		event.preventDefault();
 		database.ref().push({
 			name: name,
-			role: role,
-			startDate: startDate,
-			monthlyRate: monthlyRate,
+			destination: destination,
+			firstTrainTime: firstTrainTime,
+			frequency: frequency,
 			dateAdded: firebase.database.ServerValue.TIMESTAMP
 		});
 	});
