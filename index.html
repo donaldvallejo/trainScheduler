@@ -2,64 +2,64 @@
 <html>
   <head>
     <link rel="stylesheet" href="assets/style/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script type="text/javascript" src="assets/javascipt/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
     <meta charset="utf-8">
 
-	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
 	<script>
-		// Initialize Firebase
-		var config = {
-			apiKey: "AIzaSyCUACRpXkyNSnmSbd8GHsz5f3EnlanzSi4",
-			authDomain: "ucbx-employee-hours.firebaseapp.com",
-			databaseURL: "https://ucbx-employee-hours.firebaseio.com",
-			projectId: "ucbx-employee-hours",
-			storageBucket: "",
-			messagingSenderId: "432273790337"
-		};
-		firebase.initializeApp(config);
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAGLO--3PIpVBYVDQXF-QLg1_NqLrrqJcE",
+    authDomain: "trainscheduler-53cff.firebaseapp.com",
+    databaseURL: "https://trainscheduler-53cff.firebaseio.com",
+    projectId: "trainscheduler-53cff",
+    storageBucket: "",
+    messagingSenderId: "1095397771866"
+  };
+  firebase.initializeApp(config);
 	</script>
 
-    <title>some shit</title>
+    <title>trainScheduler</title>
   </head>
   <body>
-    <div class="jumbotron" style="background-color: #20315A ; color: white;">
-      <h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i>Employee Data Management</strong></h1>
+    <div class="jumbotron">
+      <h1 class="text-center"><strong>Train Scheduler</strong></h1>
     </div>
-
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">Current Employees</div>
-                        <!-- Table -->
-                        <table class="table">
-                            <tr>
-                                <th class="title">Employee Name</th>
-                                <th class="title">Role</th>
-                                <th class="title">Start Date</th>
-                                <th class="title">Months Worked</th>
-                                <th class="title">Monthly Rate ($)</th>
-                                <th class="title">Total Billed ($)</th>
-                            </tr>
-                            <tr>
-                                <td class="employee">...</td>
-                                <td class="employee">...</td>
-                                <td class="employee">...</td>
-                                <td class="employee">...</td>
-                                <td class="employee">...</td>
-                                <td class="employee">...</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Current Employees</div>
+              <!-- Table -->
+              <table class="table">
+                <tr>
+                    <th class="title">Train Name</th>
+                    <th class="title">Destination</th>
+                    <th class="title">Frequency (min)</th>
+                    <th class="title">Next Arrival</th>
+                    <th class="title">Minutes Away</th>
+                </tr>
+                <tr>
+                    <td class="employee">...</td>
+                    <td class="employee">...</td>
+                    <td class="employee">...</td>
+                    <td class="employee">...</td>
+                    <td class="employee">...</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
 
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>Add Employee</strong></h3>
+        <h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i>Add Train</strong></h3>
       </div>
       <div class="panel-body">
 
@@ -68,26 +68,26 @@
 
             <!-- Here we create the text box for capturing the search term-->
           <div class="form-group">
-            <label for="search">Employee Name</label>
+            <label for="search">Train Name</label>
             <input type="text" class="form-control" id="name">
           </div>
 
           <!-- Here we capture the number of records that the user wants to retrieve  -->
           <div class="form-group">
-            <label for="role">Role</label>
+            <label for="role">Destination</label>
             <input type="text" class="form-control" id="role">
 
           </div>
 
             <!-- Here we capture the Start Year Parameter-->
           <div class="form-group">
-            <label for="startYear">Start Date</label>
+            <label for="startYear">First Train Time (HH:mm - military time)</label>
             <input type="text" class="form-control" id="startDate">
           </div>
 
             <!-- Here we capture the End Year Parameter -->
           <div class="form-group">
-            <label for="endYear">Monthly Rate</label>
+            <label for="endYear">Frequency (min)</label>
             <input type="text" class="form-control" id="monthlyRate">
           </div>
 
@@ -124,9 +124,6 @@
       </div>
     </div>
   </div> -->
-    </div>
-    </div>
-  </div>
 
   </body>
 </html>

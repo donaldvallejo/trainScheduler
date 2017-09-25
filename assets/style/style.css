@@ -17,3 +17,7 @@ span {
 h2 {
   margin-left: 40%;
 }
+.jumbotron {
+  background-color: #20315A;
+  color: white;
+}
