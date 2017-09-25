@@ -9,11 +9,11 @@ $(document).ready(function () {
 		var snap = snapshot.val();
 
 		var tr = $("<tr>");
-		var trainName = $("<td></td>").text(snap.name).addClass("employee");
-		var trainDestination = $("<td></td>").text(snap.destination).addClass("employee");
-		var firstTrainTime = $("<td></td>").text(snap.firstTrainTime).addClass("employee");
-		var nextArrival = $("<td></td>").text("test").addClass("employee");
-		var frequency = $("<td></td>").text(snap.frequency).addClass("employee");
+		var trainName = $("<td></td>").text(snap.name).addClass("train");
+		var trainDestination = $("<td></td>").text(snap.destination).addClass("train");
+		var firstTrainTime = $("<td></td>").text(snap.firstTrainTime).addClass("train");
+		var nextArrival = $("<td></td>").text("test").addClass("train");
+		var frequency = $("<td></td>").text(snap.frequency).addClass("train");
 
 		tr.append(trainName);
 		tr.append(trainDestination);
