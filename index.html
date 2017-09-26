@@ -5,19 +5,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
-    <script>
-    var config = {
-    apiKey: "AIzaSyCbCM3jPGChtjpepgpm4Z2wBqwj3e4ilkw",
-    authDomain: "trainscheduler-368a5.firebaseapp.com",
-    databaseURL: "https://trainscheduler-368a5.firebaseio.com",
-    projectId: "trainscheduler-368a5",
-    storageBucket: "",
-    messagingSenderId: "503421346669"
-  };
-  firebase.initializeApp(config);
-	</script>
-
     <title>TrainScheduler</title>
   </head>
   <body>
@@ -58,7 +45,6 @@
           <div class="form-group">
             <label for="role">Destination</label>
             <input type="text" class="form-control" id="destination">
-
           </div>
 
           <div class="form-group">
@@ -73,46 +59,26 @@
 
           <button type="submit" class="btn btn-default" id="add"><i class="fa fa-search"></i> add</button>
           <button type="submit" class="btn btn-default" id="remove"><i class="fa fa-search"></i> remove</button>
-
-
         </form>
       </div>
     </div>
-
-    <!-- <div class="col-lg-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Most Recent Member</h3>
-        </div>
-        <div class="panel-body" id="recent-member">
-          <h2 id="name-display">Jimmy John</h2>
-          <h4 id="email-display">Email: jimmy@john.edu</h4>
-          <h4 id="age-display">Age: 27</h4>
-          <p id="comment-display">I'm signing up, because I want to spread sandwiches to the world.</p>
-        </div>
-      </div>
-    </div> -->
-
-  <!-- </div> -->
-  <!-- <div class="col-lg-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">All Members</h3>
-        <div class="">
-
-        </div>
-      </div>
-    </div>
-  </div> -->
-    </div>
     </div>
   </div>
-
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <!-- <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script> -->
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyCbCM3jPGChtjpepgpm4Z2wBqwj3e4ilkw",
+        authDomain: "trainscheduler-368a5.firebaseapp.com",
+        databaseURL: "https://trainscheduler-368a5.firebaseio.com",
+        projectId: "trainscheduler-368a5",
+        storageBucket: "",
+        messagingSenderId: "503421346669"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
   </body>
 </html>
