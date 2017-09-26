@@ -22,12 +22,13 @@ $(document).ready(function () {
 		tr.append(frequency);
 		table.append(tr);
 
+
 	});
 
 	$("#add").on("click", function (event) {
 		var name = $("#name").val();
 		var destination = $("#destination").val();
-		var firstTrainTime = $("firstTrainTime").val();
+		var firstTrainTime = $("#firstTrainTime").val();
 		var frequency = $("#frequency").val();
 
 		event.preventDefault();
@@ -37,16 +38,6 @@ $(document).ready(function () {
 			firstTrainTime: firstTrainTime,
 			frequency: frequency,
 			dateAdded: firebase.database.ServerValue.TIMESTAMP
-
-
 		});
 	});
-	var currentTime = (moment().format("m/d/YY hh:mm A"));
-	console.log(currentTime);
-
-// for remove button
-	// $("body").on("click", ".remove-train", function(){
-	//      $(this).closest ('tr').remove();
-	//      getKey = $(this).parent().parent().attr('id');
-	//      dataRef.child(getKey).remove();
 });
